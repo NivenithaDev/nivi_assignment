@@ -31,5 +31,14 @@
         <url-pattern>/LogoutServlet</url-pattern>
     </servlet-mapping>
     
+    <servlet>
+    <servlet-name>CabBookingServlet</servlet-name>
+    <servlet-class>Servlet.CabBookingServlet</servlet-class>
+</servlet>
+<servlet-mapping>
+    <servlet-name>CabBookingServlet</servlet-name>
+    <url-pattern>/CabBookingServlet</url-pattern>
+</servlet-mapping>
+    
         </web-app>
 </element>
