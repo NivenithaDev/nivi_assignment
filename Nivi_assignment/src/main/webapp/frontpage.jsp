@@ -33,7 +33,7 @@
 </head>
 <body>
     <div class="container">
-        <h2>Welcome, <%= username %>!</h2>
+        <h2>Welcome,</h2>
         
         <form class="logout" action="LogoutServlet" method="post">
             <button type="submit">Logout</button>
