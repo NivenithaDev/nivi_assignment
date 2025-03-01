@@ -34,7 +34,7 @@
 <body>
     <div class="container">
         <h2>Welcome, <%= username %>!</h2>
-        <p>You have successfully logged in.</p>
+        
         <form class="logout" action="LogoutServlet" method="post">
             <button type="submit">Logout</button>
         </form>
