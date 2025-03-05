@@ -115,6 +115,9 @@
             <form action="viewBill.jsp" method="post">
                 <button type="submit">View Bills</button>
             </form>
+            <form action="guidelines.jsp" method="post">
+                <button type="submit"> Guidelines</button>
+            </form>
             <form action="LogoutServlet" method="post">
                 <button type="submit">Logout</button>
             </form>
@@ -128,6 +131,14 @@
             <p>🚗 Suzuki Car - 4 Seater | AC</p>
             <p>🚐 Hiace Van - 9 Seater | AC</p>
             <p>🚐 Dolphin Van - 6 Seater | Non-AC</p>
+        </div>
+        
+        <div class="Drivers">
+            <h2>Available Drivers</h2>
+            <p> Name - Perera <br> Age - 32 <br> Mobile No - 0745632148 </p> <br><br>
+            <p> Name - Gunaretnam <br> Age - 38 <br> Mobile No - 0765231478</p> <br><br>
+            <p> Name - Thushan <br> Age - 26 <br> Mobile No - 0787465321 </p> <br><br>
+            <p> Name - Akil <br> Age - 24 <br> Mobile No - 0729514753 </p> <br><br>
         </div>
 
         <div class="form-container">
