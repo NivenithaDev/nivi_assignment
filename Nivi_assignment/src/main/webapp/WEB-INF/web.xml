@@ -40,5 +40,17 @@
     <url-pattern>/CabBookingServlet</url-pattern>
 </servlet-mapping>
     
+    	 <servlet>
+        <servlet-name>DriverLoginServlet</servlet-name>
+        <servlet-class>Servlet.DriverLoginServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>DriverLoginServlet</servlet-name>
+        <url-pattern>/DriverLoginServlet</url-pattern>
+    </servlet-mapping>
+    	
+    
+    
         </web-app>
 </element>
