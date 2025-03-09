@@ -39,12 +39,13 @@ public class CabBookingDAO {
         List<CabBookingBean> bookingList = new ArrayList<>();
         try {
             Connection conn = DriverManager.getConnection(DB_URL, DB_USER, DB_PASS);
-            String sql = "SELECT * FROM cab_booking";
+            String sql = "SELECT id, name, address, to_location, from_location, km FROM cab_booking"; // ✅ Include ID in SELECT
             PreparedStatement stmt = conn.prepareStatement(sql);
             ResultSet rs = stmt.executeQuery();
 
             while (rs.next()) {
                 CabBookingBean booking = new CabBookingBean();
+                booking.setId(rs.getInt("id"));  // ✅ Fetch ID
                 booking.setName(rs.getString("name"));
                 booking.setAddress(rs.getString("address"));
                 booking.setTo(rs.getString("to_location"));

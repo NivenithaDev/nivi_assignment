@@ -52,12 +52,10 @@
     <div class="container">
         <h2>Guidelines for Using Our Cab Service</h2>
         <div class="guidelines">
-            <p><strong>1. Simple Booking Process:</strong> Enter your pickup and drop-off locations, choose a cab type, and confirm your ride in a few easy steps.</p>
-            <p><strong>2. Transparent Pricing:</strong> View base fare, per-kilometer rate, waiting charges, and other fees before booking.</p>
-            <p><strong>3. Secure Payment Options:</strong> Pay via credit/debit cards, digital wallets, or cash for convenience.</p>
-            <p><strong>4. Real-time Driver Details:</strong> Receive driver’s name, photo, contact, and vehicle details with live GPS tracking.</p>
-            <p><strong>5. Safety Features:</strong> Use the emergency SOS button, share ride details with family, and check driver ratings/reviews.</p>
-            <p><strong>6. 24/7 Customer Support:</strong> Get help anytime with ride-related issues or refer to the FAQ section for quick answers.</p>
+            <p>Cab Bookings are Available.</p>
+            <p>Check Your Bills Also.</p>
+            <p>You can cancel your bookings.</p>
+            <p>You can join as a Driver here</p>
         </div>
         <a href="frontpage.jsp" class="back-btn">Back to Home</a>
     </div> 

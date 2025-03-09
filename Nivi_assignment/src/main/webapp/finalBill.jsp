@@ -1,8 +1,26 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<%@ page import="java.util.List, Bean.CabBookingBean" %>
+<%@ page import="java.sql.*, java.util.List, Bean.CabBookingBean, Dao.CabBookingDAO" %>
+
 <%
-    List<CabBookingBean> bookings = (List<CabBookingBean>) request.getAttribute("bookings");
+    String deleteName = request.getParameter("deleteName");
+    if (deleteName != null) {
+        try {
+            Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/nivi_cab", "root", "123456789");
+            String sql = "DELETE FROM cab_booking WHERE name=?";
+            PreparedStatement stmt = conn.prepareStatement(sql);
+            stmt.setString(1, deleteName);
+            stmt.executeUpdate();
+            conn.close();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    // Fetch updated list of bookings
+    List<CabBookingBean> bookings = CabBookingDAO.getAllBookings();
 %>
+
+
 <html>
 <head>
     <title>Final Bill</title>
@@ -44,6 +62,17 @@
         tr:nth-child(even) { 
             background-color: #f2f2f2; 
         }
+        .delete-btn {
+            background-color: red;
+            color: white;
+            border: none;
+            padding: 5px 10px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        .delete-btn:hover {
+            background-color: darkred;
+        }
         .back-button {
             margin-top: 20px;
         }
@@ -72,6 +101,7 @@
                 <th>From</th>
                 <th>KM</th>
                 <th>Price</th>
+                <th>Action</th>
             </tr>
             <% if (bookings != null && !bookings.isEmpty()) { 
                 for (CabBookingBean booking : bookings) { %>
@@ -82,10 +112,17 @@
                         <td><%= booking.getFrom() %></td>
                         <td><%= booking.getKm() %></td>
                         <td>Rs <%= booking.getPrice() %></td>
+                        <td>
+                            <form method="post" style="margin: 0;">
+    <input type="hidden" name="deleteName" value="<%= booking.getName() %>">
+    <button type="submit" class="delete-btn">Delete</button>
+</form>
+
+                        </td>
                     </tr>
             <% }} else { %>
                 <tr>
-                    <td colspan="6">No bookings available</td>
+                    <td colspan="7">No bookings available</td>
                 </tr>
             <% } %>
         </table>

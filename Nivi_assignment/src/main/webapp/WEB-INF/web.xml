@@ -50,6 +50,14 @@
         <url-pattern>/DriverLoginServlet</url-pattern>
     </servlet-mapping>
     	
+    		<servlet>
+    <servlet-name>DeleteBookingServlet</servlet-name>
+    <servlet-class>Servlet.DeleteBookingServlet</servlet-class>
+</servlet>
+<servlet-mapping>
+    <servlet-name>DeleteBookingServlet</servlet-name>
+    <url-pattern>/DeleteBookingServlet</url-pattern>
+</servlet-mapping>
     
     
         </web-app>
