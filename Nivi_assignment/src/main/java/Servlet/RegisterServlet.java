@@ -22,6 +22,18 @@ public class RegisterServlet extends HttpServlet {
         String nicNumber = request.getParameter("nic_number");
         String mailId = request.getParameter("mail_id");
 
+     // Validate password length
+        if (password.length() < 8) {
+            response.sendRedirect("index.jsp?error=Password must be at least 8 characters");
+            return;
+        }
+        
+     // Validate phone number length
+        if (!phoneNumber.matches("\\d{10}")) {
+            response.sendRedirect("index.jsp?error=Phone number must be 10 digits");
+            return;
+        }
+        
         CustomerBean customer = new CustomerBean();
         customer.setUsername(username);
         customer.setPassword(password);

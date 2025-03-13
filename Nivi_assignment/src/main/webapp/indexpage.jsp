@@ -46,8 +46,8 @@
         <h2>Register</h2>
         <form action="RegisterServlet" method="post">
             <input type="text" name="username" placeholder="Username" required>
-            <input type="password" name="password" placeholder="Password" required>
-            <input type="text" name="phone_number" placeholder="Phone Number" required>
+            <input type="password" name="password" placeholder="Password" required minlength="8">
+            <input type="text" name="phone_number" placeholder="Phone Number" required pattern="\d{10}" title="Phone number must be 10 digits">
             <input type="text" name="address" placeholder="Address" required>
             <input type="text" name="nic_number" placeholder="NIC Number" required>
             <input type="email" name="mail_id" placeholder="Mail ID" required>
